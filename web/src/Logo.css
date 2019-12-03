@@ -1,0 +1,194 @@
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+    padding: 0;
+    background: #000;
+}
+.logo{
+    height:100%;
+    width:100%;
+    position: relative;
+    text-align: center;
+}
+
+/* Standard syntax */
+ .logo1{
+    top:50%;
+    left:50%;
+    max-height: 380px; 
+    max-width: 400px;
+    position: absolute;
+    border-right: 18px solid transparent;
+    animation: load1 6s infinite alternate;
+    -webkit-animation: load1 6s infinite alternate;
+    transform: translate(-50%, -50%);
+    /* -webkit-filter: drop-shadow(0px 0px 10px rgb(252, 72, 72));
+    filter: drop-shadow(0px 0px 10px rgb(252, 72, 72));*/ 
+}
+.logo2{
+    top:50%;
+    left:50%;
+    max-height: 380px; 
+    max-width: 400px;
+    position: absolute;
+    border-right: 18px solid transparent;
+    animation: load2 6s infinite alternate;
+    -webkit-animation: load2 6s infinite alternate;
+    transform: translate(-50%, -50%);
+    /* -webkit-filter: drop-shadow(0px 0px 10px rgb(248, 134, 10));
+    filter: drop-shadow(0px 0px 10px rgb(248, 134, 10)); */
+} 
+.logo3{
+    top:50%;
+    left:50%;
+    max-height: 380px; 
+    max-width: 400px;
+    position: static;
+    border-right: 18px solid transparent;
+    animation: load1 3s ;
+    -webkit-animation: Click 3s;
+    animation-fill-mode: forwards;
+    transform: translate(-50%, -50%);
+    /* -webkit-filter: drop-shadow(0px 0px 10px rgb(252, 72, 72));
+    filter: drop-shadow(0px 0px 10px rgb(252, 72, 72));*/ 
+}
+.logo4{
+    top:50%;
+    left:50%;
+    max-height: 380px; 
+    max-width: 400px;
+    position: absolute;
+    border-right: 18px solid transparent;
+    animation: load2 3s;
+    -webkit-animation: Click2 3s;
+    animation-fill-mode: forwards;
+    transform: translate(-50%, -50%);
+    /* -webkit-filter: drop-shadow(0px 0px 10px rgb(248, 134, 10));
+    filter: drop-shadow(0px 0px 10px rgb(248, 134, 10)); */
+} 
+@keyframes Click {
+    0%{
+		transform: scale(1,1) rotate(0deg);
+		-webkit-transform: scale(1,1) rotate(0deg);
+		transform-origin:50% 50%;/*定义动画的旋转中心点*/
+	}
+    100%{
+		transformtransform: scale(0.2,0.2) rotate(-360deg);/*元素同时缩放0.2，旋转-360度*/
+		-webkit-transform: scale(0.2,0.2) rotate(-360deg);
+		transform-origin:50% 50%;/*定义动画的旋转中心点*/
+	}
+}
+@-moz-keyframes Click {
+    0%{
+        /*rotate(2D旋转) scale(放大或者缩小) translate(移动) skew(翻转)*/
+        transform: rotate(0deg);
+        transform: scale(1);
+    }
+    100%{
+        transform: rotate(360deg);
+        transform: scale(0);
+    }
+}
+@-webkit-keyframes Click {
+    0%{
+		transform: scale(1,1) rotate(0deg);
+		-webkit-transform: scale(1,1) rotate(0deg);
+		transform-origin:50% 50%;/*定义动画的旋转中心点*/
+	}
+    100%{
+		transformtransform: scale(0.2,0.2) rotate(-360deg);/*元素同时缩放0.2，旋转-360度*/
+		-webkit-transform: scale(0.2,0.2) rotate(-360deg);
+		transform-origin:50% 50%;/*定义动画的旋转中心点*/
+	}
+}
+@-moz-keyframes load1 {
+    50% {
+        -webkit-filter:drop-shadow(0px 0px 20px rgb(252, 72, 72));
+        filter:drop-shadow(0px 0px 20px rgb(252, 72, 72));
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 0px rgb(252, 72, 72));
+        filter: drop-shadow(0px 0px 0px rgb(252, 72, 72));
+    }
+}
+@keyframes load2 {
+    50% {
+        -webkit-filter: drop-shadow(0px 0px 20px rgb(248, 134, 10));
+        filter: drop-shadow(0px 0px 20px rgb(248, 134, 10));
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 0px rgb(248, 134, 10));
+        filter: drop-shadow(0px 0px 0px rgb(248, 134, 10));
+    }
+}
+@-webkit-keyframes load2 {
+    50% {
+        -webkit-filter:drop-shadow(0px 0px 20px rgb(248, 134, 10));
+        filter:drop-shadow(0px 0px 20px rgb(248, 134, 10));
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 0px rgb(248, 134, 10));
+        filter: drop-shadow(0px 0px 0px rgb(248, 134, 10));
+    }
+}
+@-moz-keyframes load2 {
+    50% {
+        -webkit-filter:drop-shadow(0px 0px 20px rgb(248, 134, 10));
+        filter:drop-shadow(0px 0px 20px rgb(248, 134, 10));
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 0px rgb(248, 134, 10));
+        filter: drop-shadow(0px 0px 0px rgb(248, 134, 10));
+    }
+}
+@keyframes Click2 {
+    0%{
+		transform: scale(1,1);
+		-webkit-transform: scale(1,1);
+	}
+    100%{
+		transformtransform: scale(0.2,0.2);/*元素同时缩放0.2，旋转-360度*/
+		-webkit-transform: scale(0.2,0.2);
+	}
+}
+@-moz-keyframes Click2 {
+    0%{
+		transform: scale(1,1);
+		-webkit-transform: scale(1,1);
+	}
+    100%{
+		transformtransform: scale(0.2,0.2);/*元素同时缩放0.2，旋转-360度*/
+		-webkit-transform: scale(0.2,0.2);
+	}
+}
+@-webkit-keyframes Click2 {
+    0%{
+		transform: scale(1,1);
+		-webkit-transform: scale(1,1);
+	}
+    100%{
+		transformtransform: scale(0.2,0.2);/*元素同时缩放0.2，旋转-360度*/
+		-webkit-transform: scale(0.2,0.2);
+	}
+}
+@keyframes load1 {
+    50% {
+        -webkit-filter: drop-shadow(0px 0px 20px rgb(252, 72, 72));
+        filter: drop-shadow(0px 0px 20px rgb(252, 72, 72));
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 0px rgb(252, 72, 72));
+        filter: drop-shadow(0px 0px 0px rgb(252, 72, 72));
+    }
+}
+@-webkit-keyframes load1 {
+    50% {
+        -webkit-filter:drop-shadow(0px 0px 20px rgb(252, 72, 72));
+        filter:drop-shadow(0px 0px 20px rgb(252, 72, 72));
+    }
+    100% {
+        -webkit-filter: drop-shadow(0px 0px 0px rgb(252, 72, 72));
+        filter: drop-shadow(0px 0px 0px rgb(252, 72, 72));
+    }
+}
