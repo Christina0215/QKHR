@@ -8,13 +8,13 @@ html, body {
 .logo{
     height:100%;
     width:100%;
-    position: relative;
+    position: static;
     text-align: center;
 }
 .logo-update{
     height:100%;
     width:100%;
-    position: relative;
+    position: static;
     text-align: center;
     pointer-events: none;
 }

@@ -5,6 +5,20 @@ import './NormalLoginForm.css';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 
 class NormalLoginForm extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {Class:"login-form"};
+  }
+  componentDidMount() {
+    console.log(this.props.Clicked);
+  }
+  componentWillReceiveProps(nextProps) {
+
+    if (nextProps.Clicked === true) {
+      console.log(this.state.Class);
+    this.setState({Class:"Clicked"});
+    }
+  }
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -13,44 +27,36 @@ class NormalLoginForm extends React.Component {
       }
     });
   };
-
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Form onSubmit={this.handleSubmit} className="login-form">
+      <Form onSubmit={this.handleSubmit} className={this.state.Class}>
         <Form.Item>
           {getFieldDecorator('username', {
-            rules: [{ required: true, message: 'Please input your username!' }],
+            rules: [{ required: true, message: '请输入用户名' }],
           })(
             <Input
               prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
-              placeholder="Username"
+              placeholder="用户名"
             />,
           )}
         </Form.Item>
         <Form.Item>
           {getFieldDecorator('password', {
-            rules: [{ required: true, message: 'Please input your Password!' }],
+            rules: [{ required: true, message: '请输入密码' }],
           })(
             <Input
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
               type="password"
-              placeholder="Password"
+              placeholder="密码"
             />,
           )}
         </Form.Item>
         <Form.Item>
-          {getFieldDecorator('remember', {
-            valuePropName: 'checked',
-            initialValue: true,
-          })(<Checkbox>Remember me</Checkbox>)}
-          <a className="login-form-forgot" href="">
-            Forgot password
-          </a>
           <Button type="primary" htmlType="submit" className="login-form-button">
-            Log in
+            登 录
           </Button>
-          Or <a href="">register now!</a>
+          Or <a href="">加入我们!</a>
         </Form.Item>
       </Form>
     );

@@ -15,7 +15,6 @@ class Logo extends React.Component{
             classdad:"logo"
         };
     }
-
     render(){
         return(
             <div className={this.state.classdad} >
@@ -26,7 +25,7 @@ class Logo extends React.Component{
     }
     clicked(){
         this.setState({class1: "logo3",class2: "logo4",classdad: "logo-update"});
-        this.props.handleSend(true);
+        this.props.Clicked();
     }
 }
 
