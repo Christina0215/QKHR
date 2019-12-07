@@ -1,8 +1,7 @@
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'antd/dist/antd.css';
-import './NormalLogForm.css';
+import './NormalLoginForm.css';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 
 class NormalLoginForm extends React.Component {

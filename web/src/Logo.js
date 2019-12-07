@@ -6,22 +6,29 @@ import img2Url from "./assest/Logo2.png"
 
 
 class Logo extends React.Component{
+    constructor(props){
+        super(props);
+        this.state={
+            // class: true,
+            class1:"logo1",
+            class2:"logo2",
+            classdad:"logo"
+        };
+    }
+
     render(){
         return(
-            <div className="logo" >
-            <img className="logo1" src={img1Url} draggable="false"/>
-            <img className="logo2" src={img2Url} draggable="false"/>
+            <div className={this.state.classdad} >
+            <img className={this.state.class1} src={img1Url} draggable="false"/>
+            <img className={this.state.class2} src={img2Url} draggable="false" onClick={()=>this.clicked()}/>
             </div>
         )
     }
+    clicked(){
+        this.setState({class1: "logo3",class2: "logo4",classdad: "logo-update"});
+        this.props.handleSend(true);
+    }
 }
-$(document).ready(function(){
-$(".logo2").click(function(){
-    //给要启用动画的标签绑定设置好的css动画        
-    $(".logo1").attr("class","logo3");
-    $(".logo2").attr("class","logo4");
-    //$("logo-for-kmbbs1").style.display;
-});
-});
+
 
 export default Logo;
